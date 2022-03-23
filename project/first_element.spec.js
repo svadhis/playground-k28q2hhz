@@ -18,11 +18,11 @@ tests.forEach(function(test) {
 
 try {
   assert.equal(success, tests.length);
-  printMessage('Standard Output', 'C\'est une réussite ! ');
+  printMessage('Standard Output', 'Well done !');
   success++;
 } catch (error) {
   console.log('\nTECHIO> success false')
-  console.error("Tous les tests ne sont pas passés");
+  printMessage('Standard Output', 'All tests did not pass');
 }
 
 
