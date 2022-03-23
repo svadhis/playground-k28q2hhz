@@ -5,25 +5,24 @@ let assert = require('assert');
 let tests = createTests();
 let success = 0;
 tests.forEach(function(test) {
-  if(exercice.getFirstElement.apply(null, test.values) === test.answer){
-    printMessage('Success', '✓ '+test.name+' succed');
+    let result = exercice.getFirstElement.apply(null, test.values);
+    printMessage('Standard Output', test.name+' result : '+result);
+  if(result === test.answer){
+    printMessage('Success', '✓ '+test.name+' OK');
     success++;
   }
   else{
-    printMessage('Error', 'X '+test.name+' failed');
+    printMessage('Error', 'X '+test.name+' NOK : '+test.answer+' expected');
   }
 }, this);
-
-
 
 try {
   assert.equal(success, tests.length);
   printMessage('Standard Output', 'C\'est une réussite ! ');
   success++;
 } catch (error) {
-  printMessage('Standard Output💡', 'Encore un petit effort.🤔');
   console.log('\nTECHIO> success false')
-  console.error("Tous les tests ne sont pas justes !");
+  console.error("Tous les tests ne sont pas passés");
 }
 
 
