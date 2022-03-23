@@ -6,6 +6,7 @@ let tests = createTests();
 let success = 0;
 tests.forEach(function(test) {
     let result = exercice.getFirstElement.apply(null, test.values);
+    printMessage('Standard Output', test.name+' data : '+test.values);
     printMessage('Standard Output', test.name+' result : '+result);
   if(result === test.answer){
     printMessage('Success', '✓ '+test.name+' OK');
