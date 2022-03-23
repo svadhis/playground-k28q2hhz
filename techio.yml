@@ -1,9 +1,13 @@
 title: Javascript simple structures manipulations
 plan:
+- title: Manipulations de structures simples en Javascript
+  statement: markdown/intro.md
 - title: Premier élément d'un tableau
   statement: markdown/first_element.md
 - title: Avant-dernier élément d'un tableau
   statement: markdown/penultimate_element.md
+- title: Correction
+  statement: markdown/correction_1_2.md
 
 projects:
   nodejs:

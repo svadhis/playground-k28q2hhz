@@ -6,7 +6,7 @@ function validate(testData, f, correction) {
         let result = f.apply(null, [test]);
         let expected = correction(test);
         printMessage('Standard Output', 'Test ' + (i + 1) + ' data : ' + test);
-        printMessage('Standard Output', 'Test ' + (i + 1) + ' result : ' + result);
+        printMessage('Standard Output', '=> ' + result);
     if(result === expected){
         printMessage('Success', '✓ Test ' + (i + 1) + ' OK');
         success++;
