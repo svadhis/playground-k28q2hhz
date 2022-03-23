@@ -1,0 +1,8 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^9.2.2"
+  }
+}
