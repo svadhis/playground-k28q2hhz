@@ -1,4 +1,11 @@
-title: Simple Node.js Template
+title: Javascript simple structures manipulations
 plan:
-- title: Node.js Snippet
-  statement: statement.md
+- title: Premier élément d'un tableau
+  statement: first_element.md
+
+projects:
+  nodejs:
+    root: /project
+    runner:
+      name: techio/node-npm-runner
+      version: latest
