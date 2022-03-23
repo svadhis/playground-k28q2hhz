@@ -1,11 +1,11 @@
-let exercice = require('./first_element.js');
+let exercice = require('./penultimate_element.js');
 let assert = require('assert');
 
 
 let tests = createTests();
 let success = 0;
 tests.forEach(function(test) {
-    let result = exercice.getFirstElement.apply(null, test.values);
+    let result = exercice.getPenultimateElement.apply(null, test.values);
     printMessage('Standard Output', test.name+' result : '+result);
   if(result === test.answer){
     printMessage('Success', '✓ '+test.name+' OK');
@@ -31,20 +31,20 @@ function createTests() {
     {
       name:"Test 1",
       values:[[1, 12, 3, 6, 5, 12, 5, 9, 16, 10, 7]],
-      answer:getFirstElementAnswer([1, 12, 3, 6, 5, 12, 5, 9, 16, 10, 7])
+      answer:getPenultimateElementAnswer([1, 12, 3, 6, 5, 12, 5, 9, 16, 10, 7])
     },
     {
       name:"Test 2",
       values:[[982, 1543, 24, 543, 72, 1]],
-      answer:getFirstElementAnswer([982, 1543, 24, 543, 72, 1])
+      answer:getPenultimateElementAnswer([982, 1543, 24, 543, 72, 1])
     }
   ]
 
   return tests;
 }
 
-function getFirstElementAnswer(table){
-    return table[0];
+function getPenultimateElementAnswer(table){
+    return table[table.length - 2];
 }
 
 function printMessage(channel, message) {
