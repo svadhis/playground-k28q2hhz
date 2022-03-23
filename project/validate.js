@@ -1,6 +1,6 @@
-import assert from 'assert';
+let assert = require('assert');
 
-export function validate(testData, f, correction) {
+function validate(testData, f, correction) {
     let success = 0;
     testData.forEach(function(test, i) {
         let result = f.apply(null, [test]);
@@ -29,3 +29,7 @@ export function validate(testData, f, correction) {
 function printMessage(channel, message) {
     console.log('\nTECHIO> message --channel "' + channel + '" "' + message + '"');
 }
+
+module.exports = {
+    validate: validate
+};

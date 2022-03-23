@@ -1,4 +1,8 @@
-export function getPenultimateElement(table)
+function getPenultimateElement(table)
 {
  return table;
 }
+
+module.exports = {
+    getPenultimateElement: getPenultimateElement
+};
