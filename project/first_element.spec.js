@@ -37,7 +37,7 @@ function createTests() {
     {
       name:"Test 2",
       values:[[982, 1543, 24, 543, 72, 1]],
-      answer:bissextileAnswer([982, 1543, 24, 543, 72, 1])
+      answer:getFirstElementAnswer([982, 1543, 24, 543, 72, 1])
     }
   ]
 
